@@ -8,7 +8,7 @@
                 </p>
             </div>
             <div class="col-md-auto text-center text-md-start">
-                <p class="mb-0 text-uppercase">© Copyright 2024 All Rights Reserved 好客沙發 </p>
+                <p class="mb-0 text-uppercase">© Copyright 2025 All Rights Reserved 好客沙發 </p>
             </div>
         </div>
     </div>
