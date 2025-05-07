@@ -426,7 +426,7 @@
                 </div>
 
                 <div class="col-md-8 align-self-center ftco-animate">
-                    <iframe style="width: 100%; height: 400px;"
+                    <iframe style="width: 100%; height: 35rem;"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.493111004323!2d120.69121407534627!3d24.084148478444206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dbd305365a3%3A0x861a22e6b36a769b!2z5aW95a6i5rKZ55m8IGh1bGsgc29mYQ!5e0!3m2!1szh-TW!2stw!4v1746251685499!5m2!1szh-TW!2stw"
                         frameborder="0" allowfullscreen=""></iframe>
                 </div>
