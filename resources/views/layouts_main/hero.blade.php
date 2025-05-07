@@ -20,12 +20,12 @@
 </section>
 <!-- Carousel End -->
 
-<section class="ftco-services bg-light pt-1">
+<section class="ftco-services bg-light pt-md-3 pt-2">
     <div class="container-fluid px-0 mx-0">
-        <div class="row no-gutters" id="sub-banner">
-            <div class="col-4 d-flex2 align-self-stretch ftco-animate">
+        <div class="row justify-content-center w-100 mx-0" id="sub-banner">
+            <div class="col-4 d-flex ftco-animate align-items-center  px-0">
                 <div>
-                    <img src="{{asset('assets/images/sub-banner.png')}}" class="img-fluid w-100" alt="">
+                    <img src="{{asset('assets/images/sub-banner.png')}}" class="img-fluid w-100 pr-2" alt="">
                 </div>
                 <!-- <div class="media block-6 services d-block">
             <div class="icon d-flex justify-content-center align-items-center">
@@ -37,14 +37,14 @@
             </div>
           </div> -->
             </div>
-            <div class="col-4 d-flex2 align-self-stretch ftco-animate">
+            <div class="col-4 d-flex ftco-animate px-0 align-self-center">
                 <div>
-                    <img src="{{asset('assets/images/sub-banner2.png')}}" class="img-fluid w-100" alt="">
+                    <img src="{{asset('assets/images/sub-banner2.png')}}" class="img-fluid w-100 px-1" alt="">
                 </div>
             </div>
-            <div class="col-4 d-flex2 align-self-stretch ftco-animate">
+            <div class="col-4 d-flex ftco-animate align-items-center  px-0">
                 <div>
-                    <img src="{{asset('assets/images/sub-banner3.png')}}" class="img-fluid w-100" alt="">
+                    <img src="{{asset('assets/images/sub-banner3.png')}}" class="img-fluid w-100 pl-2" alt="">
                 </div>
             </div>
         </div>

@@ -60,7 +60,7 @@
         </div>
     </section>
 
-    <section class="ftco-section">
+    <section class="ftco-section pb-0">
         <div class="container">
             <div class="row" id="process">
                 <div class="col-lg-12 mb-5 pb-3">
@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4 pb-5">
                     <div class="process-box ftco-animate">
                         <div class="process-header">
                             <span>01</span>
@@ -84,19 +84,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4 pb-5">
                     <div class="process-box ftco-animate">
                         <div class="process-header">
                             <span>02</span>
                             <h3>設計規劃</h3>
                         </div>
                         <div class="process-content text-center">
-                            <img src="{{asset('assets/images/process01.jpg')}}" class="img-fluid w-50" alt="">
+                            <img src="{{asset('assets/images/process02.jpg')}}" class="img-fluid w-50" alt="">
                             <p>提供設計圖或參考圖⽚，<br>討論細節與調整。</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4 pb-5">
                     <div class="process-box ftco-animate">
                         <div class="process-header">
                             <span>03</span>
@@ -108,38 +108,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4 pb-5">
                     <div class="process-box ftco-animate">
                         <div class="process-header">
                             <span>04</span>
                             <h3>正式製作</h3>
                         </div>
                         <div class="process-content text-center">
-                            <img src="{{asset('assets/images/process03.jpg')}}" class="img-fluid w-50" alt="">
+                            <img src="{{asset('assets/images/process04.jpg')}}" class="img-fluid w-50" alt="">
                             <p>依試坐結果進⾏泡棉、⾯料加⼯與組裝。</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4 pb-5">
                     <div class="process-box ftco-animate">
                         <div class="process-header">
                             <span>05</span>
                             <h3>品質檢查</h3>
                         </div>
                         <div class="process-content text-center">
-                            <img src="{{asset('assets/images/process03.jpg')}}" class="img-fluid w-50" alt="">
+                            <img src="{{asset('assets/images/process05.jpg')}}" class="img-fluid w-50" alt="">
                             <p>完⼯後嚴格檢驗，確保品質與細節無誤。</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4 pb-5">
                     <div class="process-box ftco-animate">
                         <div class="process-header">
                             <span>06</span>
                             <h3>交付與安裝</h3>
                         </div>
                         <div class="process-content text-center">
-                            <img src="{{asset('assets/images/process03.jpg')}}" class="img-fluid w-50" alt="">
+                            <img src="{{asset('assets/images/process06.jpg')}}" class="img-fluid w-50" alt="">
                             <p>送貨⾄指定地點，完成安裝與確認。</p>
                         </div>
                     </div>
@@ -174,70 +174,49 @@
 
                         @endforeach
 
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-A-tab" data-toggle="pill" data-target="#pills-A"
-                                type="button" role="tab" aria-controls="pills-A" aria-selected="true">手作沙發</button>
-                        </li>
                     </ul>
 
                 </div>
             </div>
 
-            <div class="tab-content ftco-animate" id="pills-tabContent">
+            <div class="tab-content ftco-animate mt-5" id="pills-tabContent">
                 @foreach ($categories ?? [] as $category)
                     {{-- // 同一個類別的產品會在同一個 tab 中的row 中顯示 --}}
+
                     <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}" id="pills-{{ $category->id }}"
                         role="tabpanel" aria-labelledby="pills-{{ $category->id }}-tab">
-                        <div class="row">
-                            @foreach ($cases ?? [] as $case)
-                                @if ($case->category_id != $category->id)
-                                    @continue
-                                @endif
-                                <div class="col-lg-4 col-md-6 mb-4">
-                                    <div class="product-box pb-4 ftco-animate">
-                                        {{-- <a href="{{ route('product.show', $product->id) }}"> --}}
-                                        <img src="{{ env('APP_URL') . '/uploads/' . $case->image }}" class="img-fluid" alt="">
-                                        {{-- </a> --}}
-                                        <div class="product-content text-center mt-3 mb-4">
-                                            <h3>{{ $case->name }}</h3>
-                                            <p>{!! $case->content !!}</p>
-                                        </div>
-                                        <div class="product-btn d-flex justify-content-end">
-                                            {{-- <a href="{{ route('product.show', $case->id) }}"> --}}
-                                            <img src="{{asset('assets/images/product-arrow.png')}}" class="img-fluid product-arrow" alt="">
-                                            {{-- </a> --}}
+
+                        <!-- 產品清單包在一個容器中方便分頁 -->
+                        <div class="product-wrapper" data-category-id="{{ $category->id }}">
+                            <div class="row product-list" id="product-list-{{ $category->id }}">
+                                @foreach ($cases ?? [] as $case)
+                                    @if ($case->category_id != $category->id)
+                                        @continue
+                                    @endif
+                                    <div class="col-lg-4 col-md-6 mb-4 product-item">
+                                        <div class="product-box pb-4 ftco-animate">
+                                            <a href="{{ env('APP_URL') . '/uploads/' . $case->image }}" data-fancybox="gallery">
+                                                <img src="{{ env('APP_URL') . '/uploads/' . $case->image }}" class="img-fluid" alt="">
+                                            </a>
+                                            <div class="product-content text-center mt-3 mb-4 px-3">
+                                                <h3>{{ $case->name }}</h3>
+                                                <p>{!! $case->content !!}</p>
+                                            </div>
+                                            <div class="product-btn d-flex justify-content-end">
+                                                <img src="{{ asset('assets/images/product-arrow.png') }}" class="img-fluid product-arrow" alt="">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
+
+                            <!-- 分頁控制器 -->
+                            <div class="pagination-container d-flex justify-content-center mt-4" id="pagination-{{ $category->id }}"></div>
                         </div>
                     </div>
 
 
                 @endforeach
-                @if (count($cases) == 0)
-                <div class="tab-pane fade show active" id="pills-A" role="tabpanel" aria-labelledby="pills-A-tab">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="product-box pb-4 ftco-animate">
-                                {{-- <a href="{{ route('product.show', 1) }}"> --}}
-                                <img src="{{asset('assets/images/qa-bg.jpg')}}" class="img-fluid" alt="">
-                                {{-- </a> --}}
-                                <div class="product-content text-center mt-3 mb-4">
-                                    <h3>手作沙發</h3>
-                                    <p>這是一個手作沙發的描述。</p>
-                                </div>
-                                <div class="product-btn d-flex justify-content-end">
-                                    <a href="javascript:void(0);">
-                                        <img src="{{asset('assets/images/product-arrow.png')}}" class="img-fluid product-arrow" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                @endif
 
 
             </div>
@@ -249,10 +228,10 @@
 
     <section class="ftco-section">
         <div class="container">
-            <div class="row" id="product-details">
+            <div class="row justify-content-end" id="product-details">
                 <div class="col-lg-8 mb-5">
-                    <div class="heading-section mb-5 pl-md-5 heading-section-with-line ftco-animate">
-                        <div class="pl-md-5 ml-md-5">
+                    <div class="heading-section mb-5 pr-md-5 text-md-right heading-section-with-line ftco-animate">
+                        <div class="pr-md-5 mr-md-5">
                             <span class="subheading">Product Details</span>
                             <h2 class="mb-4">產品細節</h2>
                         </div>
@@ -260,7 +239,7 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center">
+            <div class="row justify-content-center text-center">
 
                 <div class="col-lg-5 mb-3">
                     <img src="{{asset('assets/images/pro-details01.jpg')}}" class="img-fluid pro-details-img ftco-animate" alt="">
@@ -291,7 +270,7 @@
                             style="z-index: 2;">
                             <div class="pl-md-5 ml-md-5">
                                 <span class="subheading text-info">Q&A</span>
-                                <h2 class="mb-4 font-weight-bold">各是沙發與床墊相關問答</h2>
+                                <h2 class="mb-4 font-weight-bold">各式沙發與床墊相關問答</h2>
                             </div>
                         </div>
                     </div>
@@ -406,19 +385,23 @@
     <section class="ftco-section">
         <div class="container">
             <div class="row" id="contact">
-                <div class="col-lg-4 align-self-center">
+                <div class="col-lg-4 align-self-center mb-lg-0 mb-3">
                     <div class="contact-box h-100 ftco-animate">
                         <div class="contact-content m-3 text-center">
                             <h4 class="text-uppercase m-0 text-light font-weight-bold">
-                                好客沙發 <br class="d-lg-none d-class">你的客製沙發專家</h4>
+                                好客沙發 <br class="d-lg-none d-block">你的客製沙發專家</h4>
                             <div class="liner-h-2 mx-auto my-4"></div>
                             <div class="cta-s-1 text-center p-3 mb-3 mx-auto"
-                                style="width: max-content;background-color: #FFFFFFCC !important;">
-                                <h4>預約方式</h4>
-                                <h5 style="font-size: 20px;"><a href=""
-                                        style="color: #503f3a !important; ">Line預約</a>
+                                style="width: fit-content;background-color: #FFFFFFCC !important;">
+                                {{-- <h4>預約方式</h4> --}}
+                                <h5 style="font-size: 20px;"><a href="https://lin.ee/TIk7DIc"
+                                        style="color: #14476e !important; ">立馬線上預約</a>
                                 </h5>
                                 <div class="liner-h mx-auto"></div>
+                                <a href="https://lin.ee/TIk7DIc">
+                                    <img src="https://qr-official.line.me/gs/M_745imvkz_BW.png?oat_content=qr"
+                                        class="img-fluid mt-3" width="200" alt="">
+                                </a>
                             </div>
                             <div class="d-flex justify-content-center mb-4">
                                 <a href="javascript:void(0);"><img src="{{asset('assets/images/icon/facebook.png')}}" class="img-fluid mx-2"
@@ -450,3 +433,54 @@
             </div>
     </section>
 @endsection
+
+
+@push('page-scripts')
+<script>
+    $(document).ready(function () {
+        // 每頁顯示幾個產品
+        var itemsPerPage = 6;
+
+        // 對每個分類的產品區塊套用分頁
+        $('.product-wrapper').each(function () {
+            var $wrapper = $(this);
+            var categoryId = $wrapper.data('category-id');
+            var $items = $wrapper.find('.product-item');
+            var $pagination = $('#pagination-' + categoryId);
+
+            // 若產品少於等於 itemsPerPage，則不顯示分頁
+            if ($items.length <= itemsPerPage) {
+                $pagination.hide();
+                return;
+            }
+
+            // 初始化分頁
+            $pagination.pagination({
+                items: $items.length,
+                itemsOnPage: itemsPerPage,
+                // cssStyle: 'light-theme',
+                prevText: `<i class="fas fa-arrow-left"></i>`,
+                nextText: `<i class="fas fa-arrow-right"></i>`,
+                onPageClick: function (pageNumber) {
+                    // 計算目前頁面應該顯示的產品項目索引
+                    var start = (pageNumber - 1) * itemsPerPage;
+                    var end = start + itemsPerPage;
+
+                    // 隱藏所有項目，僅顯示當前頁的
+                    $items.hide().slice(start, end).show();
+                }
+            });
+
+            // 預設顯示第一頁
+            $items.hide().slice(0, itemsPerPage).show();
+        });
+
+        // 每次切換 tab 時，觸發分頁更新（防止內容未初始化）
+        $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+            var targetId = $(e.target).attr('data-target').replace('#pills-', '');
+            $('#pagination-' + targetId).pagination('drawPage', 1);
+        });
+    });
+</script>
+
+@endpush

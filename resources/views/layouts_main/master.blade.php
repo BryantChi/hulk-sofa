@@ -45,6 +45,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}?v={{time()}}">
     <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}?v={{time()}}">
@@ -108,6 +109,8 @@
     <script src="{{ asset('assets/js/scrollax.min.js')}}"></script>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
     <!-- <script src="js/google-map.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js "></script>
 
 
     <script src="{{asset('assets/js/main.js')}}?v={{time()}}"></script>
@@ -135,6 +138,8 @@
             // },
         });
     </script>
+
+    @stack('page-scripts')
 
 </body>
 

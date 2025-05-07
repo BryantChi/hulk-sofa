@@ -10503,7 +10503,7 @@ textarea.form-control {
 }
 
 .ftco-bg-dark {
-  background: #3c312e;
+  background: #14476e;
 }
 
 .ftco-footer {
@@ -10669,7 +10669,8 @@ textarea.form-control {
   width: 100%;
   height: 1px;
   content: "";
-  background: #503f3a;
+  /* background: #503f3a; */
+  background: #14476e;
 }
 
 .heading-section.heading-section-white .subheading {
