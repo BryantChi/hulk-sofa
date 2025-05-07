@@ -74,7 +74,7 @@
       <i class="fas fa-angle-up"></i>
     </div>
   </a> -->
-        <a href="javascript:void(0);" target="_blank">
+        <a href="https://lin.ee/TIk7DIc" target="_blank">
             <div class="hFab hFabLine">
                 <i class="fab fa-youtube"></i>
             </div>
