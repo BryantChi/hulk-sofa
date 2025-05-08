@@ -23,7 +23,7 @@
 <section class="ftco-services bg-light pt-md-3 pt-2">
     <div class="container-fluid px-0 mx-0">
         <div class="row justify-content-center w-100 mx-0" id="sub-banner">
-            <div class="col-4 d-flex ftco-animate align-items-center  px-0">
+            <div class="col-4 d-flex2 ftco-animate align-items-center  px-0">
                 <div>
                     <img src="{{asset('assets/images/sub-banner.png')}}" class="img-fluid w-100 pr-2" alt="">
                 </div>
@@ -37,12 +37,12 @@
             </div>
           </div> -->
             </div>
-            <div class="col-4 d-flex ftco-animate px-0 align-self-center">
+            <div class="col-4 d-flex2 ftco-animate px-0 align-self-center">
                 <div>
                     <img src="{{asset('assets/images/sub-banner2.png')}}" class="img-fluid w-100 px-1" alt="">
                 </div>
             </div>
-            <div class="col-4 d-flex ftco-animate align-items-center  px-0">
+            <div class="col-4 d-flex2 ftco-animate align-items-center  px-0">
                 <div>
                     <img src="{{asset('assets/images/sub-banner3.png')}}" class="img-fluid w-100 pl-2" alt="">
                 </div>
