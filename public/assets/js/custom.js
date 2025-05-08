@@ -16,4 +16,22 @@ $(function() {
             $currentBox.find('.faq-item-arrow-d').removeClass('d-none');
         }
     });
+
+    let scrollToTopVisible = false;
+
+    $(window).on('scroll', () => {
+        const $scrollToTop = $('.scroll-to-top');
+
+        if ($(window).scrollTop() > 100) {
+            if (!scrollToTopVisible) {
+                $scrollToTop.fadeIn();
+                scrollToTopVisible = true;
+            }
+        } else {
+            if (scrollToTopVisible) {
+                $scrollToTop.fadeOut();
+                scrollToTopVisible = false;
+            }
+        }
+    });
 });

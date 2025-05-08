@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}?v={{time()}}">
 </head>
 
-<body>
+<body id="page-top">
 
 
     @include('layouts_main.navbar')
@@ -69,11 +69,11 @@
         </svg></div>
 
     <div class="hFixFabFlex">
-        <!-- <a href="#page-top">
-    <div class="hFab scroll-to-top">
-      <i class="fas fa-angle-up"></i>
-    </div>
-  </a> -->
+        <a href="#page-top">
+            <div class="hFab scroll-to-top">
+            <i class="fas fa-angle-up"></i>
+            </div>
+        </a>
         <a href="https://lin.ee/TIk7DIc" target="_blank">
             <div class="hFab hFabLine">
                 <i class="fab fa-youtube"></i>
