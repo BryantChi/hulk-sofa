@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}?v={{time()}}">
 </head>
 
-<body id="page-top">
+<body>
 
 
     @include('layouts_main.navbar')
@@ -69,7 +69,7 @@
         </svg></div>
 
     <div class="hFixFabFlex">
-        <a href="#page-top">
+        <a href="javascript:void(0)">
             <div class="hFab scroll-to-top">
             <i class="fas fa-angle-up"></i>
             </div>
