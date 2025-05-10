@@ -495,6 +495,7 @@
                 items: $items.length,
                 itemsOnPage: itemsPerPage,
                 // cssStyle: 'light-theme',
+                hrefTextPrefix: 'javascript:void(0)',
                 prevText: `<i class="fas fa-arrow-left"></i>`,
                 nextText: `<i class="fas fa-arrow-right"></i>`,
                 onPageClick: function (pageNumber) {
