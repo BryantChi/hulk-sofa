@@ -76,7 +76,7 @@
         </a>
         <a href="https://lin.ee/TIk7DIc" target="_blank">
             <div class="hFab hFabLine">
-                <i class="fab fa-youtube"></i>
+                <i class="fab fa-line"></i>
             </div>
         </a>
         <a href="https://www.facebook.com/profile.php?id=100087392558874&mibextid=LQQJ4d" target="_blank">

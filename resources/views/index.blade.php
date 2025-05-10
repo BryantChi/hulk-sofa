@@ -72,74 +72,74 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4 pb-5">
+                <div class="col-lg-4 col-6 mb-4 pb-5">
                     <div class="process-box ftco-animate">
                         <div class="process-header">
                             <span>01</span>
                             <h3>需求溝通</h3>
                         </div>
                         <div class="process-content text-center">
-                            <img src="{{asset('assets/images/process01.jpg')}}" class="img-fluid w-50" alt="">
+                            <img src="{{asset('assets/images/process01.jpg')}}" class="img-fluid w-md-50" alt="">
                             <p>確認尺⼨、⾵格、材質及功能需求。</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-5">
+                <div class="col-lg-4 col-6 mb-4 pb-5">
                     <div class="process-box ftco-animate">
                         <div class="process-header">
                             <span>02</span>
                             <h3>設計規劃</h3>
                         </div>
                         <div class="process-content text-center">
-                            <img src="{{asset('assets/images/process02.jpg')}}" class="img-fluid w-50" alt="">
-                            <p>提供設計圖或參考圖⽚，<br>討論細節與調整。</p>
+                            <img src="{{asset('assets/images/process02.jpg')}}" class="img-fluid w-md-50" alt="">
+                            <p>提供設計圖或參考圖⽚，<br class="d-md-block d-none">討論細節與調整。</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-5">
+                <div class="col-lg-4 col-6 mb-4 pb-5">
                     <div class="process-box ftco-animate">
                         <div class="process-header">
                             <span>03</span>
                             <h3>報價與下單</h3>
                         </div>
                         <div class="process-content text-center">
-                            <img src="{{asset('assets/images/process03.jpg')}}" class="img-fluid w-50" alt="">
-                            <p>根據材質與⼯法提供報價，<br>確認訂製細節、下單。</p>
+                            <img src="{{asset('assets/images/process03.jpg')}}" class="img-fluid w-md-50" alt="">
+                            <p>根據材質與⼯法提供報價，<br class="d-md-block d-none">確認訂製細節、下單。</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-5">
+                <div class="col-lg-4 col-6 mb-4 pb-5">
                     <div class="process-box ftco-animate">
                         <div class="process-header">
                             <span>04</span>
                             <h3>正式製作</h3>
                         </div>
                         <div class="process-content text-center">
-                            <img src="{{asset('assets/images/process04.jpg')}}" class="img-fluid w-50" alt="">
+                            <img src="{{asset('assets/images/process04.jpg')}}" class="img-fluid w-md-50" alt="">
                             <p>依試坐結果進⾏泡棉、⾯料加⼯與組裝。</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-5">
+                <div class="col-lg-4 col-6 mb-4 pb-lg-5">
                     <div class="process-box ftco-animate">
                         <div class="process-header">
                             <span>05</span>
                             <h3>品質檢查</h3>
                         </div>
                         <div class="process-content text-center">
-                            <img src="{{asset('assets/images/process05.jpg')}}" class="img-fluid w-50" alt="">
+                            <img src="{{asset('assets/images/process05.jpg')}}" class="img-fluid w-md-50" alt="">
                             <p>完⼯後嚴格檢驗，確保品質與細節無誤。</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-5">
+                <div class="col-lg-4 col-6 mb-4 pb-lg-5">
                     <div class="process-box ftco-animate">
                         <div class="process-header">
                             <span>06</span>
                             <h3>交付與安裝</h3>
                         </div>
                         <div class="process-content text-center">
-                            <img src="{{asset('assets/images/process06.jpg')}}" class="img-fluid w-50" alt="">
+                            <img src="{{asset('assets/images/process06.jpg')}}" class="img-fluid w-md-50" alt="">
                             <p>送貨⾄指定地點，完成安裝與確認。</p>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
         </div>
     </section>
 
-    <section class="ftco-section">
+    <section class="ftco-section pb-0">
         <div class="container">
             <div class="row" id="product">
                 <div class="col-lg-8 mb-5">
@@ -197,7 +197,7 @@
                                         <div class="product-box pb-4 ftco-animate">
                                             <a href="{{ env('APP_URL') . '/uploads/' . $case->image }}" data-fancybox="gallery">
                                                 <img src="{{ env('APP_URL') . '/uploads/' . $case->image }}" class="img-fluid" alt="">
-                                            </a>
+
                                             <div class="product-content text-center mt-3 mb-4 px-3">
                                                 <h3>{{ $case->name }}</h3>
                                                 <p>{!! $case->content !!}</p>
@@ -205,6 +205,7 @@
                                             <div class="product-btn d-flex justify-content-end">
                                                 <img src="{{ asset('assets/images/product-arrow.png') }}" class="img-fluid product-arrow" alt="">
                                             </div>
+                                        </a>
                                         </div>
                                     </div>
                                 @endforeach
@@ -226,12 +227,12 @@
     </section>
 
 
-    <section class="ftco-section">
+    <section class="ftco-section pb-0">
         <div class="container">
-            <div class="row justify-content-end" id="product-details">
+            <div class="row justify-content-start" id="product-details">
                 <div class="col-lg-8 mb-5">
-                    <div class="heading-section mb-5 pr-md-5 text-md-right heading-section-with-line ftco-animate">
-                        <div class="pr-md-5 mr-md-5">
+                    <div class="heading-section mb-5 pl-md-5 heading-section-with-line ftco-animate">
+                        <div class="pl-md-5 ml-md-5">
                             <span class="subheading">Product Details</span>
                             <h2 class="mb-4">產品細節</h2>
                         </div>
@@ -259,7 +260,7 @@
         </div>
     </section>
 
-    <section class="ftco-section">
+    <section class="ftco-section pb-0">
         <div class="container">
             <div class="row" id="qa">
                 <div class="col-lg-6 position-relative d-flex align-items-start pt-5 mb-lg-0 mb-5">
@@ -382,17 +383,50 @@
         </div>
     </section>
 
-    <section class="ftco-section">
+    <section class="ftco-section pb-0">
+        <div class="container">
+            <div class="row justify-content-center" id="warranty">
+                <div class="col-lg-12 mb-5">
+                    <div class="heading-section mb-5 pl-md-5 heading-section-with-line ftco-animate text-center">
+                        <div class="pl-md-52 ml-md-52">
+                            <span class="subheading">Warranty</span>
+                            <h2 class="mb-4">保固說明</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center" id="">
+                <div class="col-lg-12 ftco-animate">
+                    <h5>保固說明：</h5>
+
+                    <p class="mb-0 text-justify font-weight-normal">
+                        感謝您選擇好客的客製化沙發，我們提供完善保固，讓您安⼼使⽤！<br>
+                        ✅ ⾻架終⾝保固：結構穩固，⾮⼈為損壞可免費維修。<br>
+                        ✅ 坐墊泡棉 10 年保固：坐墊為消耗品，若正常使⽤下塌陷⼤於 5cm 則可申請保固服務。<br>
+                        ✅ 布料 1 年保固：⾮⼈為瑕疵，如嚴重脫線、裂開可修補或更換。<br>
+                        ✅ ⽜⽪ 3 年保固：⾃然裂痕、異常脫⽪可維修或更換。<br>
+                        保固不適⽤：<br>
+                        • 正常使⽤產⽣的磨損、⾊差、皺褶。<br>
+                        • ⼈為損壞（⼑割、菸燙、寵物抓咬等）<br>
+                        • 環境因素導致的變質或褪⾊<br>
+                        本公司保留最終保固解釋權與處理權，並依實際情況判定是否符合保固條件。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section pb-0 mb-3">
         <div class="container">
             <div class="row" id="contact">
                 <div class="col-lg-4 align-self-center mb-lg-0 mb-3">
                     <div class="contact-box h-100 ftco-animate">
                         <div class="contact-content m-3 text-center">
-                            <h4 class="text-uppercase m-0 text-light font-weight-bold">
+                            <h4 class="text-uppercase m-0 text-14476e font-weight-bold">
                                 好客沙發 <br class="d-lg-none d-block">你的客製沙發專家</h4>
                             <div class="liner-h-2 mx-auto my-4"></div>
                             <div class="cta-s-1 text-center p-3 mb-3 mx-auto"
-                                style="width: fit-content;background-color: #FFFFFFCC !important;">
+                                style="width: fit-content;background-color: #14476e33 !important;border-radius: 10px;">
                                 {{-- <h4>預約方式</h4> --}}
                                 <h5 style="font-size: 20px;"><a href="https://lin.ee/TIk7DIc"
                                         style="color: #14476e !important; ">立馬線上預約</a>
@@ -403,7 +437,19 @@
                                         class="img-fluid mt-3" width="200" alt="">
                                 </a>
                             </div>
-                            <div class="d-flex justify-content-center mb-4">
+
+                            <p class="mb-4 text-left w-fit mx-md-auto">
+                                <a href="https://maps.app.goo.gl/modzuwMtiDpo2Ex9A" class="text-14476e"><i
+                                        class="icon bi bi-geo-alt flex-shrink-0"></i> 412 台中市⼤⾥區公園街 415 號</a><br>
+                                <a href="tel:0987-946-618" class="text-14476e"><i
+                                        class="icon bi bi-telephone flex-shrink-0"></i>
+                                    0987-946-618</a><br>
+                                <a href="javascript:void(0);" class="text-14476e">
+                                    <i class="icon bi bi-clock flex-shrink-0"></i>
+                                    營業時間： 星期⼀〜五 08:00–17:20</a>
+                            </p>
+
+                            <div class="d-flex justify-content-center mb-0">
                                 <a href="https://www.facebook.com/profile.php?id=100087392558874&mibextid=LQQJ4d"><img src="{{asset('assets/images/icon/facebook.png')}}" class="img-fluid mx-2"
                                         width="26" alt=""></a>
                                 <a href="https://lin.ee/TIk7DIc"><img src="{{asset('assets/images/icon/line.png')}}" class="img-fluid mx-2"
@@ -411,16 +457,6 @@
                                 <a href="https://www.instagram.com/hulk_sofa/reels/"><img src="{{asset('assets/images/icon/instagram.png')}}" class="img-fluid mx-2"
                                         width="26" alt=""></a>
                             </div>
-                            <p>
-                                <a href="https://maps.app.goo.gl/modzuwMtiDpo2Ex9A" class="text-light"><i
-                                        class="icon bi bi-geo-alt flex-shrink-0"></i> 412 台中市⼤⾥區公園街 415 號</a><br>
-                                <a href="tel:0987-946-618" class="text-light"><i
-                                        class="icon bi bi-telephone flex-shrink-0"></i>
-                                    0987-946-618</a><br>
-                                <a href="javascript:void(0);" class="text-light">
-                                    <i class="icon bi bi-clock flex-shrink-0"></i>
-                                    營業時間： 星期⼀〜五 08:00–17:20</a>
-                            </p>
                         </div>
                     </div>
                 </div>

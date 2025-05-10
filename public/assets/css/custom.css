@@ -313,8 +313,15 @@ html {
 
 .contact-box {
     border-radius: 5px;
-  border: 5px solid #14476e94 !important;
-  background-color: #4682b0cc !important;
+  /* border: 5px solid #14476e94 !important;
+  background-color: #4682b0cc !important; */
+}
+
+.text-14476e {
+  color: #14476e !important;
+}
+.text-14476e-light {
+  color: #14476e94 !important;
 }
 
 .liner-h {
@@ -326,11 +333,22 @@ html {
 .liner-h-2 {
   width: 90%;
   height: 1px;
-  background-color: #f6f6f6cc;
+  /* background-color: #f6f6f6cc; */
+    background-color: #14476e94;
 }
 
 .text-gold {
   color: #d4af37 !important;
+}
+
+.w-md-50 {
+  width: 50% !important;
+}
+
+@media (max-width: 768px) {
+  .w-md-50 {
+    width: 100% !important;
+  }
 }
 
 .hFixFabFlex {
