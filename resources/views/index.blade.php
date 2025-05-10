@@ -451,11 +451,11 @@
 
                             <div class="d-flex justify-content-center mb-0">
                                 <a href="https://www.facebook.com/profile.php?id=100087392558874&mibextid=LQQJ4d"><img src="{{asset('assets/images/icon/facebook.png')}}" class="img-fluid mx-2"
-                                        width="26" alt=""></a>
+                                        width="36" alt=""></a>
                                 <a href="https://lin.ee/TIk7DIc"><img src="{{asset('assets/images/icon/line.png')}}" class="img-fluid mx-2"
-                                        width="26" alt=""></a>
+                                        width="36" alt=""></a>
                                 <a href="https://www.instagram.com/hulk_sofa/reels/"><img src="{{asset('assets/images/icon/instagram.png')}}" class="img-fluid mx-2"
-                                        width="26" alt=""></a>
+                                        width="36" alt=""></a>
                             </div>
                         </div>
                     </div>
