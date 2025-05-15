@@ -271,7 +271,7 @@
                             style="z-index: 2;">
                             <div class="pl-md-5 ml-md-5">
                                 <span class="subheading text-info">Q&A</span>
-                                <h2 class="mb-4 font-weight-bold">各式沙發與床墊相關問答</h2>
+                                <h2 class="mb-4 font-weight-bold">各式沙發相關問答</h2>
                             </div>
                         </div>
                     </div>
