@@ -194,7 +194,7 @@
                                         @continue
                                     @endif
                                     <div class="col-lg-4 col-md-6 mb-4 product-item">
-                                        <div class="product-box pb-4 ftco-animate">
+                                        <div class="product-box pb-4 ftco-animate2">
                                             <a href="{{ env('APP_URL') . '/uploads/' . $case->image }}" data-fancybox="gallery">
                                                 <img src="{{ env('APP_URL') . '/uploads/' . $case->image }}" class="img-fluid" alt="">
 
