@@ -17,6 +17,8 @@ $(function() {
         }
     });
 
+});
+
     let scrollToTopVisible = false;
 
     $(window).on('scroll', () => {
@@ -38,4 +40,3 @@ $(function() {
     $('.scroll-to-top').on('click', () => {
         $('html, body').animate({ scrollTop: 0 }, 500);
     });
-});
