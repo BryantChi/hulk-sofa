@@ -19,24 +19,38 @@ $(function() {
 
 });
 
-    let scrollToTopVisible = false;
+let scrollToTopVisible = false;
+let lastScrollTop = 0; // 追蹤上一次的滾動位置
 
-    $(window).on('scroll', () => {
-        const $scrollToTop = $('.scroll-to-top');
+$(window).on('scroll', () => {
+    const $scrollToTop = $('.scroll-to-top');
+    const currentScrollTop = $(window).scrollTop();
 
-        if ($(window).scrollTop() > 100) {
-            if (!scrollToTopVisible) {
-                $scrollToTop.fadeIn();
-                scrollToTopVisible = true;
-            }
-        } else {
-            if (scrollToTopVisible) {
-                $scrollToTop.fadeOut();
-                scrollToTopVisible = false;
-            }
+    // 只在真正需要時才觸發滾動事件
+    if (Math.abs(lastScrollTop - currentScrollTop) <= 5) {
+        return;
+    }
+
+    if (currentScrollTop > 100) {
+        if (!scrollToTopVisible) {
+            $scrollToTop.fadeIn();
+            scrollToTopVisible = true;
         }
-    });
+    } else {
+        if (scrollToTopVisible) {
+            $scrollToTop.fadeOut();
+            scrollToTopVisible = false;
+        }
+    }
 
-    $('.scroll-to-top').on('click', () => {
-        $('html, body').animate({ scrollTop: 0 }, 500);
+    lastScrollTop = currentScrollTop;
+});
+
+// 只在點擊回到頂部按鈕時才觸發滾動
+$('.scroll-to-top').on('click', (e) => {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, {
+        duration: 500,
+        easing: 'swing'
     });
+});
