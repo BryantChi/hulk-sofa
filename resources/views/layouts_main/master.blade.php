@@ -18,7 +18,7 @@
     <title>{{ $seoInfo->title ?? '好客沙發｜客製化高品質舒適沙發 - 讓您坐享極致美好' }}</title>
     <meta name="title" content="{{ $seoInfo->title ?? '好客沙發｜客製化高品質舒適沙發 - 讓您坐享極致美好' }}" />
     <link rel="canonical" href="{{ url()->full() }}" />
-    <meta name="google-site-verification" content="" />
+    <meta name="google-site-verification" content="E8BIgeQg6EnvGIuGKq1PjNwcBzV00riw4Y-MJH8M4xo" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
