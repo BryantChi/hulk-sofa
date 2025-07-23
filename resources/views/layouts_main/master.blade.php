@@ -12,13 +12,16 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ $seoInfo->og_title ?? '好客沙發｜客製化高品質舒適沙發 - 讓您坐享極致美好' }}" />
     <meta property="og:description" content="{{ $seoInfo->og_discription ?? '好客沙發 ─ 結合美學與舒適，提供多款客製化沙發選擇，免費試坐與快速配送，打造專屬您的客廳風格。' }}" />
-    <meta property="og:image" content="{{ asset('assets/images/fimgs/fbimg.jpg') }}" />
+    <meta property="og:image" content="{{ asset('assets/images/logo_img.png') }}" />
     <meta property="og:url" content="{{ url()->full() }}" />
     <meta property="og:site_name" content="{{ $seoInfo->og_site_name ?? '好客沙發' }}" />
     <title>{{ $seoInfo->title ?? '好客沙發｜客製化高品質舒適沙發 - 讓您坐享極致美好' }}</title>
     <meta name="title" content="{{ $seoInfo->title ?? '好客沙發｜客製化高品質舒適沙發 - 讓您坐享極致美好' }}" />
     <link rel="canonical" href="{{ url()->full() }}" />
     <meta name="google-site-verification" content="E8BIgeQg6EnvGIuGKq1PjNwcBzV00riw4Y-MJH8M4xo" />
+
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo_img.png') }}">
+    <link rel="icon" href="{{ asset('assets/images/logo_img.png') }}">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
